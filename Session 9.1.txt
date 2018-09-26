@@ -1,0 +1,58 @@
+Session 9 – Statistical Inference
+Assignment – 1
+
+1.
+> pnorm(2.64, lower.tail = FALSE)
+[1] 0.004145301
+> 2 * pnorm(-1.39)
+[1] 0.1645289
+> 
+
+2.
+> -qnorm(0.99)
+[1] -2.326348
+> A <- as.data.frame(UCBAdmissions)
+> head(A)
+     Admit Gender Dept Freq
+1 Admitted   Male    A  512
+2 Rejected   Male    A  313
+3 Admitted Female    A   89
+4 Rejected Female    A   19
+5 Admitted   Male    B  353
+6 Rejected   Male    B  207
+> xtabs(Freq ~ Admit, data = A)
+Admit
+Admitted Rejected 
+    1755     2771 
+> phat <- 1755/(1755 + 2771)
+> (phat - 0.4)/sqrt(0.4 * 0.6/(1755 + 2771))
+[1] -1.680919
+> -qnorm(0.95)
+[1] -1.644854
+> -qnorm(0.95)
+[1] -1.644854
+> pnorm(-1.680919)
+[1] 0.04638932
+> > qnorm(0.99)
+[1] 2.326348
+> A <- as.data.frame(UCBAdmissions)
+> head(A)
+     Admit Gender Dept Freq
+1 Admitted   Male    A  512
+2 Rejected   Male    A  313
+3 Admitted Female    A   89
+4 Rejected Female    A   19
+5 Admitted   Male    B  353
+6 Rejected   Male    B  207
+> xtabs(Freq ~ Admit, data = A)
+Admit
+Admitted Rejected 
+    1755     2771 
+> phat <- 1755/(1755 + 2771)
+> (phat + 0.4)/sqrt(0.4 * 1.4/(1755 + 2771))
+[1] 70.82017
+> qnorm(0.95)
+[1] 1.644854
+> pnorm(70.82017)
+[1] 1
+> 
